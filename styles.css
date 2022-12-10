@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3eae3;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+img.img-parfum-desktop {
+    display: none;
+}
+
+section.conteneur {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0.5em;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+@media (max-width: 700px) {
+    section.conteneur {
+        max-width: 343px;
+        max-height: 613px;
+    }
+}
+
+div.fiche {
+    background-color: #ffffff;
+    padding: 0.5em 1.5em;
+    display: grid;
+    grid-template:
+    auto
+    auto
+    auto
+    auto
+    auto
+    / 1fr 1fr;
+}
+
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    grid-column: span 2;
+    margin: 0 0 1rem 0;
+    line-height: 1.9rem;
+}
+
+.categorie {
+    font-size: 0.8rem;
+    letter-spacing: 0.3rem;
+    color: #6f6e74;
+    grid-column: span 2;
+}
+
+.description {
+    font-size: 0.88rem;
+    color: #6f6e74;
+    line-height: 1.5rem;
+    grid-column: span 2;
+    margin: 0;
+}
+
+.prix-final {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #3d8168;
+    grid-area: 4 / 1 / 5 / 2;
+    margin: 20px 0;
+}
+
+.prix-barre {
+    font-size: 0.8rem;
+    color: #6f6e74;
+    text-decoration: line-through;
+    grid-area: 4 / 2 / 5 / 2;
+    align-self: center;
+}
+
+button {
+    grid-area: 5 / 1 / 6 / 3;
+    background-color: #3d8168;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 0.2rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+img.icon-cart {
+    padding-right: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #1a4031;
+}
+
+@media (min-width: 701px) {
+
+
+
+    img.img-parfum-mobile {
+        display: none;
+    }
+
+    img.img-parfum-desktop {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    section.conteneur {
+        position: fixed;
+        top: 30%;
+        transform: translate(0, -30%);
+        display: grid;
+        grid-template:
+        1fr
+        / auto auto;
+        max-width: 600px;
+    }
+
+    div.fiche {
+        height: 450px;
+        width: 300px;
+        padding: 1em 2em;
+    }
+
+    .prix-barre {
+        justify-self: center;
+    }
+
+    button {
+        padding: 0rem;
+    }
+
+}
